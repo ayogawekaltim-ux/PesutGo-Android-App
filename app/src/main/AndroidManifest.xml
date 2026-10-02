@@ -21,10 +21,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PesutGo.Splash">
 
+        <!-- Native Home -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -34,26 +36,42 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="www.pesutgo.com" />
-                <data android:scheme="https" android:host="pesutgo.com" />
+                <data
+                    android:scheme="https"
+                    android:host="www.pesutgo.com" />
+                <data
+                    android:scheme="https"
+                    android:host="pesutgo.com" />
             </intent-filter>
+
         </activity>
 
+        <!-- WebView untuk Login Mitra / Customer dan halaman website -->
+        <activity
+            android:name=".web.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Native GPS Foreground Service -->
         <service
             android:name=".location.LocationForegroundService"
             android:exported="false"
             android:foregroundServiceType="location"
             android:stopWithTask="false" />
 
+        <!-- Camera / File Upload -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
+
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
+
         </provider>
 
     </application>
+
 </manifest>
