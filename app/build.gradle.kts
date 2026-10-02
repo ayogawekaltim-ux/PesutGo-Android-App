@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -14,23 +16,39 @@ android {
         versionCode = 1
         versionName = "1.0.0"
 
-        buildConfigField("String", "PESUTGO_WEB_ORIGIN", "\"https://www.pesutgo.com\"")
+        buildConfigField(
+            "String",
+            "PESUTGO_WEB_ORIGIN",
+            "\"https://www.pesutgo.com\""
+        )
     }
 
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
-            buildConfigField("Boolean", "ENABLE_WEBVIEW_DEBUG", "true")
+
+            buildConfigField(
+                "Boolean",
+                "ENABLE_WEBVIEW_DEBUG",
+                "true"
+            )
         }
+
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("Boolean", "ENABLE_WEBVIEW_DEBUG", "false")
+
+            buildConfigField(
+                "Boolean",
+                "ENABLE_WEBVIEW_DEBUG",
+                "false"
+            )
         }
     }
 
@@ -43,14 +61,21 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+}
+
+/*
+ * Kotlin 2.3.x menggunakan compilerOptions DSL.
+ * Jangan menggunakan kotlinOptions { jvmTarget = "17" }
+ * karena sudah deprecated/error pada Kotlin 2.3.
+ */
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
     }
 }
 
