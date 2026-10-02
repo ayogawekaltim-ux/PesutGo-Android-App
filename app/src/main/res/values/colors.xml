@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pesut_orange">#FF7900</color>
+    <color name="pesut_orange_dark">#E65E00</color>
+    <color name="pesut_navy">#10284A</color>
+    <color name="pesut_text">#18263D</color>
+    <color name="pesut_muted">#657084</color>
+    <color name="pesut_bg">#F7F8FA</color>
+    <color name="pesut_card">#FFFFFF</color>
+    <color name="pesut_border">#E9EDF3</color>
+    <color name="pesut_green">#19A463</color>
+    <color name="white">#FFFFFF</color>
+</resources>

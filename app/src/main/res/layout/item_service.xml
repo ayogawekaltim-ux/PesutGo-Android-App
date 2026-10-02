@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="112dp"
+    android:layout_columnWeight="1"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_light_orange"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <TextView
+        android:id="@+id/serviceIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🛵"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/serviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ojek"
+        android:textColor="@color/pesut_navy"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/serviceDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Antar Anda\ndengan Nyaman"
+        android:textColor="@color/pesut_muted"
+        android:textSize="9sp" />
+</LinearLayout>

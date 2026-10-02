@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PesutGo</string>
+    <string name="home_welcome">Selamat Datang di PesutGo</string>
+    <string name="home_subtitle">Platform besutan dari Samarinda</string>
+    <string name="home_description">Temukan mitra terbaik atau wujudkan passion Anda bersama PesutGo.</string>
+    <string name="login_provider">Login Mitra</string>
+    <string name="login_provider_subtitle">Mulai berkarya bersama kami</string>
+    <string name="login_customer">Login Customer</string>
+    <string name="login_customer_subtitle">Pesan layanan dengan mudah</string>
+    <string name="services_title">Layanan Unggulan</string>
+    <string name="services_subtitle">Pilihan layanan untuk kebutuhan Anda</string>
+    <string name="promo_title">Nikmati Berbagai Promo Menarik di PesutGo</string>
+    <string name="promo_subtitle">Layanan berkualitas dengan banyak keuntungan setiap hari.</string>
+    <string name="nav_home">Beranda</string>
+    <string name="nav_orders">Pesanan</string>
+    <string name="nav_activity">Aktivitas</string>
+    <string name="nav_profile">Profil</string>
+    <string name="location_active">Pelacakan lokasi PesutGo sedang aktif.</string>
+    <string name="location_channel">Pelacakan lokasi</string>
+</resources>
